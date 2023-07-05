@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_chime4_1688549463065
+  name: Build chime4
+  orgIdentifier: default
+  projectIdentifier: Fred
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1688548762813
+        repoName: missgoin/chime4
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI

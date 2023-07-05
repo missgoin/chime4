@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_chime4_1688549463065-push-trigger-input-set
+  identifier: Build_chime4_1688549463065pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Fred
+  pipeline:
+    identifier: Build_chime4_1688549463065
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
